@@ -1,19 +1,109 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "Avocado_Creamy";
+  src: url(./asset/fonts/Avocado_Creamy.ttf);
 }
-
-@media (prefers-reduced-motion: no-preference) {
+@font-face {
+  font-family: "Cheese Pizza";
+  src: url(./asset/fonts/CHEESEPIZZA.ttf);
+}
+html {
+  background-color: lightgoldenrodyellow;
+  text-align: center;
+}
+h1 {
+  font-family: "Avocado_Creamy";
+  text-align: center;
+  font-size: 45px;
+  margin: 30px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 5px;
+}
+#refresh {
+  font-family: "Cheese Pizza";
+  font-size: 20px;
+}
+form {
+  font-family: "Cheese Pizza";
+  font-size: 25px;
+  border-style: double;
+  border-color: black;
+  margin: 10px;
+  padding: 5px;
+}
+#logo {
+  margin-top: 10px;
+  text-align: center;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+#None {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  font-size: 25px;
+  padding: 10px;
+}
+.filter {
+  margin: 2px;
+  padding: 2px;
+}
+.icon {
+  background-size: 10px;
+}
+.recipes {
+  column-count: 1;
+  break-inside: avoid-column;
+}
+input[type="submit" i] {
+  margin: 10px;
+}
+label {
+  margin: 10px;
+}
+@media screen and (min-width: 768px) {
+  .recipes {
+    column-count: 2;
+    /* font-size: 2em; */
+    /* #None {
+    column-count: 1;
+  } */
+  }
+  form {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .recipes {
+    column-count: 3;
+    /* font-size: 3em; */
+  }
+  /* .recipes img {
+    width: 500px;
+    height: 500px;
+  } */
+  .recipe
+  /* #None {
+    column-count: 1;
+  } */
+  form {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,9 +112,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
-.App-link {
+/* .App-link {
   color: #61dafb;
 }
 
@@ -35,4 +125,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
