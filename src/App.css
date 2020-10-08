@@ -22,6 +22,10 @@ h1 {
   margin-bottom: 2px;
   padding: 5px;
 }
+#refresh {
+  font-family: "Cheese Pizza";
+  font-size: 20px;
+}
 form {
   font-family: "Cheese Pizza";
   font-size: 25px;

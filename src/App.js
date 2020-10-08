@@ -17,7 +17,7 @@ class App extends Component {
     this._handleSubmit = this._handleSubmit.bind(this);
     this.state = {
       result1: [],
-      hasResult: false,
+      // hasResult: false,
       firstTime: true,
       keyword: {
         name: "title",
@@ -164,22 +164,29 @@ class App extends Component {
     });
     this.setState({
       result1: filteredList,
-      hasResult: true,
+      firstTime: false,
     });
     console.log(this.hasResult);
     return false;
   }
 
   render() {
-    const recipeComponent =
-      this.state.result1.length > 0 ? (
-        this.state.result1.map((result) => {
-          // console.log(result.title);
-          return <Recipe key={result.title} recipe={result} />; // add unique key here
-        })
-      ) : (
-        <div id="None">No Results Found</div>
-      );
+    const isFirstTime = this.state.firstTime;
+    let recipeComponent = [];
+    if (isFirstTime) {
+      recipeComponent = this.state.result1; // return <div></div>;
+    } else {
+      recipeComponent =
+        this.state.result1.length > 0 ? (
+          this.state.result1.map((result) => {
+            // console.log(result.title);
+            return <Recipe key={result.title} recipe={result} />; // add unique key here
+          })
+        ) : (
+          <div id="None">No Results Found</div>
+        );
+    }
+
     // console.log(this.state.result1);
     return (
       <div className="App">
@@ -189,6 +196,7 @@ class App extends Component {
         </div> */}
         <img src={icon} id="logo" alt="Dish with Utensils" />
         <h1>Yummy Recipes</h1>
+        <div id="refresh">Please refresh for every new search</div>
         <form onSubmit={this._handleSubmit}>
           <div className="filter">
             <label htmlFor="fname">Recipe name:</label>
